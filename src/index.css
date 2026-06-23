@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --vh: 100vh;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+html, body {
+  background: #d9dde2;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  color: #16213A;
+}
+
+h1, h2, h3, .font-display {
+  font-family: 'Poppins', system-ui, sans-serif;
+}
+
+/* Hero gradient used on Landing / VerifyPhone / AppRedirect screens.
+   Stops measured by sampling the screenshot pixel-by-pixel down the hero column. */
+.hero-gradient {
+  background: linear-gradient(
+    180deg,
+    #4FA3DE 0%,
+    #3B82C2 28%,
+    #357FBE 42%,
+    #5C92C4 60%,
+    #BFD5E6 80%,
+    #FFFFFF 100%
+  );
+}
+
+.cta-gradient {
+  background: linear-gradient(135deg, #367CED 0%, #5C93EE 60%, #73ACF3 100%);
+}
+
+/* Hide scrollbars for the A-Z index rail / horizontal chip rows without losing scroll */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@keyframes shake {
+  10%, 90% { transform: translateX(-1px); }
+  20%, 80% { transform: translateX(2px); }
+  30%, 50%, 70% { transform: translateX(-4px); }
+  40%, 60% { transform: translateX(4px); }
+}
+.animate-shake {
+  animation: shake 0.5s;
+}
+
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
